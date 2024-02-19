@@ -39,27 +39,27 @@ public class ApplicationMenu {
     private void processOption(int option){
         switch (option) {
             case 1 -> {
-                System.out.println("Enter N of Fourier series:");
+                System.out.print("Enter N of Fourier series: ");
                 int n = new Scanner(System.in).nextInt();
                 System.out.println("Enter the interval [a,b]:");
-                System.out.println("a = ");
+                System.out.print("a = ");
                 double a = new Scanner(System.in).nextDouble();
-                System.out.println("b = ");
+                System.out.print("b = ");
                 double b = new Scanner(System.in).nextDouble();
-                System.out.println("Enter the number of points:");
+                System.out.print("Enter the number of points: ");
                 int nOfPoints = new Scanner(System.in).nextInt();
                 plotDrawer.drawFourierPlot(a, b, MyFourierConfig.FUNCTION, calculator, nOfPoints, n);
             }
             case 2 -> {
-                System.out.println("Enter N of Fourier series:");
+                System.out.print("Enter N of Fourier series: ");
                 int n = new Scanner(System.in).nextInt();
-                System.out.println("Enter the point t:");
+                System.out.print("Enter the point t: ");
                 double t = new Scanner(System.in).nextDouble();
                 consoleWriteHelper.printFourierSeries(MyFourierConfig.FUNCTION, MyFourierConfig.A,
                         MyFourierConfig.B, n, t);
             }
             case 3 -> {
-                System.out.println("Enter N of Fourier series:");
+                System.out.print("Enter N of Fourier series: ");
                 int n = new Scanner(System.in).nextInt();
                 System.out.println("Average error for [" +MyFourierConfig.A + " , " + MyFourierConfig.B +
                         "] interval with 100 points and " + "fourier series with " +
