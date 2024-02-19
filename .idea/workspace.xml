@@ -5,21 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2743274-404b-40e8-9b2a-2ed96b8e2c30" name="Changes" comment="[feat] lab1 implementation(Fourier series for 2pi periodic functions)">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/martsin/ApplicationMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/martsin/MyFourierConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/martsin/PlotDrawer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/martsin/fourier/FourierCalculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/martsin/fourier/FourierCalculatorImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/martsin/fourier/IntegralCalculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/martsin/fourier/SimpsonIntegralCalculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/martsin/writer/ConsoleWriteHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/martsin/writer/ResultFileWriter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/martsin/writer/ResultWriter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/martsin/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/martsin/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,19 +46,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dev.martsin.Main" />
@@ -102,6 +88,8 @@
       <option name="presentableId" value="Default" />
       <updated>1708162814089</updated>
       <workItem from="1708162815355" duration="1061000" />
+      <workItem from="1708271353377" duration="607000" />
+      <workItem from="1708288909334" duration="88000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1708162843346</created>
