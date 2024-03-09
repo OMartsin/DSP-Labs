@@ -9,6 +9,11 @@ public class PolynomCalculator {
         return x -> coefficients[0] * x * x + coefficients[1] * x + coefficients[2];
     }
 
+    public void printPolynomialFunction(Map<Double, Double> points) {
+        double[] coefficients = solveForPolynomialCoefficients(points);
+        System.out.println("Polynomial function: " + coefficients[0] + "x^2 + " + coefficients[1] + "x + " + coefficients[2]);
+    }
+
     private double[] solveForPolynomialCoefficients(Map<Double, Double> points) {
         double[][] sys = new double[3][4];
         for (Map.Entry<Double, Double> entry : points.entrySet()) {

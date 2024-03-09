@@ -13,6 +13,7 @@ public class Main {
                 , MyFourierConfig.FUNCTION, fourierCalculator, nOfPoints, polynomCalculator.
                         calculatePolynomialFunction(MyFourierConfig.FUNCTION));
         AvgErrorCalculator avgErrorCalculator = new AvgErrorCalculator();
+        polynomCalculator.printPolynomialFunction(MyFourierConfig.FUNCTION);
         avgErrorCalculator.calculateAvgPolynomError(MyFourierConfig.FUNCTION);
         avgErrorCalculator.calculateAvgFourierError(MyFourierConfig.FUNCTION);
         avgErrorCalculator.calculateAvgQuadraticPolynomError(MyFourierConfig.FUNCTION);
