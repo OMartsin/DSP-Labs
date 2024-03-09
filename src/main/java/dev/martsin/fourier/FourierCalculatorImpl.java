@@ -1,59 +1,52 @@
 package dev.martsin.fourier;
 
-import dev.martsin.writer.ResultFileWriter;
-
-import java.util.function.Function;
-
-
+import java.util.HashMap;
+import java.util.Map;
 
 public class FourierCalculatorImpl implements FourierCalculator {
-    private final ResultFileWriter resultFileWriter;
-    private final IntegralCalculator integralCalculator;
+    private final Map<Double, Double> discreteFunction;
+    private final Map<Integer, Double> ak;
+    private final Map<Integer, Double> bk;
 
-    public FourierCalculatorImpl(String resultFileName, IntegralCalculator integralCalculator) {
-        this.resultFileWriter = new ResultFileWriter(resultFileName);
-        this.integralCalculator = integralCalculator;
-    }
-    private Double countAn(Function<Double, Double> f, double a, double b, int n) {
-        return (1 / Math.PI) * integralCalculator.calculateIntegral(t -> f.apply(t) * Math.cos(n * t), a, b);
-    }
-
-    private Double countBn(Function<Double, Double> f, double a, double b, int n) {
-        return (1 / Math.PI) * integralCalculator.calculateIntegral(t -> f.apply(t) * Math.sin(n * t), a, b);
+    public FourierCalculatorImpl(
+                                 Map<Double, Double> discreteFunction) {
+        this.discreteFunction = discreteFunction;
+        this.ak = new HashMap<>();
+        this.bk = new HashMap<>();
     }
 
-    public Double countA0(Function<Double, Double> f, double a, double b) {
-        return (1 / Math.PI) * integralCalculator.calculateIntegral(f, a, b);
-    }
-
-    public Double countFourierSeries(Function<Double, Double> f, double a, double b, int n, double t) {
-        resultFileWriter.writeNofFourierSeries(n);
-        t = t % (2 * Math.PI);
-        if(t < - Math.PI) t += 2 * Math.PI;
-        if(t > Math.PI) t -= 2 * Math.PI;
-        double sum = 0;
-        var a0 = countA0(f, a, b);
-        resultFileWriter.writeA0(a0);
-        for (int i = 1; i <= n; i++) {
-            var an = countAn(f, a, b, i);
-            var bn = countBn(f, a, b, i);
-            sum += an * Math.cos(i * t) + bn * Math.sin(i * t);
-            resultFileWriter.writeAn(i, an);
-            resultFileWriter.writeBn(i, bn);
+    public Double countFourierSeries(int n, double t) {
+        Double a0 = ak.computeIfAbsent(0, k -> countA0());
+        double sum = a0 / 2;
+        for (int k = 1; k < n; k++) {
+            var ak = this.ak.computeIfAbsent(k, this::countAk);
+            var bk = this.bk.computeIfAbsent(k, this::countBk);
+            sum += ak * Math.cos(k * t) + bk * Math.sin(k * t);
         }
-        var fourier = a0 / 2 + sum;
-        resultFileWriter.writeFunctionValue(t, f.apply(t));
-        resultFileWriter.writeFourierSeries(t, fourier);
-        return fourier;
+        return sum;
     }
 
-    public Double countAverageError(Function<Double, Double> f, double a, double b, int fourierN, int nOfPoints) {
-        double h = (b - a) / nOfPoints;
-        double sum = 0;
-        for (int i = 0; i < nOfPoints; i++) {
-            double t = a + i * h;
-            sum += Math.abs(f.apply(t) - countFourierSeries(f, a, b, fourierN, t));
+    private Double countA0() {
+        var ak = 0.0;
+        for(var entry: discreteFunction.entrySet()){
+            ak += entry.getValue();
         }
-        return sum / nOfPoints;
+        return ak * (2.0 / discreteFunction.size());
+    }
+
+    private Double countAk(int k) {
+        var ak = 0.0;
+        for(var entry: discreteFunction.entrySet()){
+            ak += entry.getValue() * Math.cos(k * entry.getKey());
+        }
+        return ak * (2.0 / discreteFunction.size());
+    }
+
+    private Double countBk(int k) {
+        var bk = 0.0;
+        for(var entry: discreteFunction.entrySet()){
+            bk += entry.getValue() * Math.sin(k * entry.getKey());
+        }
+        return bk * (2.0 / discreteFunction.size());
     }
 }

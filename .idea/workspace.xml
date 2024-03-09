@@ -4,8 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2743274-404b-40e8-9b2a-2ed96b8e2c30" name="Changes" comment="[feat] lab1 implementation(Fourier series for 2pi periodic functions)">
+    <list default="true" id="f2743274-404b-40e8-9b2a-2ed96b8e2c30" name="Changes" comment="[feat] change menu">
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/martsin/AvgErrorCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/martsin/polinom/PolynomCalculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/martsin/ApplicationMenu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/martsin/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/martsin/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/martsin/MyFourierConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/martsin/MyFourierConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/martsin/PlotDrawer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/martsin/PlotDrawer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/martsin/fourier/FourierCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/martsin/fourier/FourierCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/martsin/fourier/FourierCalculatorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/martsin/fourier/FourierCalculatorImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/martsin/fourier/IntegralCalculator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/martsin/fourier/SimpsonIntegralCalculator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/martsin/writer/ConsoleWriteHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/martsin/writer/ResultFileWriter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/martsin/writer/ResultWriter.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +103,8 @@
       <workItem from="1708162815355" duration="1061000" />
       <workItem from="1708271353377" duration="607000" />
       <workItem from="1708288909334" duration="88000" />
+      <workItem from="1709938265527" duration="230000" />
+      <workItem from="1709973931914" duration="3915000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1708162843346</created>
