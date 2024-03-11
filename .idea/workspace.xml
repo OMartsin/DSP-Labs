@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2743274-404b-40e8-9b2a-2ed96b8e2c30" name="Changes" comment="[feat] lab2">
+    <list default="true" id="f2743274-404b-40e8-9b2a-2ed96b8e2c30" name="Changes" comment="[feat] add polynom visualize">
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/martsin/fourier/FourierCalculatorFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/martsin/fourier/IntegralCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/martsin/fourier/SimpsonIntegralCalculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/martsin/AvgErrorCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/martsin/AvgErrorCalculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/martsin/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/martsin/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/martsin/polinom/PolynomCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/martsin/polinom/PolynomCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/martsin/fourier/FourierCalculatorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/martsin/fourier/FourierCalculatorDiscrete.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +29,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="feat/lab2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -61,6 +65,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="dev.martsin.fourier" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dev.martsin.Main" />
@@ -93,7 +102,9 @@
       <workItem from="1708271353377" duration="607000" />
       <workItem from="1708288909334" duration="88000" />
       <workItem from="1709938265527" duration="230000" />
-      <workItem from="1709973931914" duration="5576000" />
+      <workItem from="1709973931914" duration="6190000" />
+      <workItem from="1710077071165" duration="714000" />
+      <workItem from="1710164718012" duration="1696000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1708162843346</created>
@@ -116,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709978037967</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="[feat] add polynom visualize">
+      <created>1709979971723</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1709979971723</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +155,7 @@
     <MESSAGE value="init" />
     <MESSAGE value="[refactor] change main directory" />
     <MESSAGE value="[feat] lab2" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat] lab2" />
+    <MESSAGE value="[feat] add polynom visualize" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat] add polynom visualize" />
   </component>
 </project>

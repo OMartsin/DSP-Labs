@@ -3,12 +3,12 @@ package dev.martsin.fourier;
 import java.util.HashMap;
 import java.util.Map;
 
-public class FourierCalculatorImpl implements FourierCalculator {
+public class FourierCalculatorDiscrete implements FourierCalculator {
     private final Map<Double, Double> discreteFunction;
     private final Map<Integer, Double> ak;
     private final Map<Integer, Double> bk;
 
-    public FourierCalculatorImpl(
+    public FourierCalculatorDiscrete(
                                  Map<Double, Double> discreteFunction) {
         this.discreteFunction = discreteFunction;
         this.ak = new HashMap<>();

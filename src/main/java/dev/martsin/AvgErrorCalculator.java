@@ -1,7 +1,8 @@
 package dev.martsin;
 
 import dev.martsin.fourier.FourierCalculator;
-import dev.martsin.fourier.FourierCalculatorImpl;
+import dev.martsin.fourier.FourierCalculatorFunction;
+import dev.martsin.fourier.SimpsonIntegralCalculator;
 import dev.martsin.polinom.PolynomCalculator;
 
 import java.util.Map;
@@ -15,8 +16,8 @@ public class AvgErrorCalculator {
     }
 
     public void calculateAvgQuadraticFourierError(Map<Double,Double> discreteFunction) {
-        FourierCalculator fourierCalculator = new FourierCalculatorImpl(discreteFunction);
-
+        FourierCalculator fourierCalculator = new FourierCalculatorFunction(new SimpsonIntegralCalculator(),
+                new PolynomCalculator().calculatePolynomialFunction(discreteFunction));
         System.out.println("Avg quadratic error fourier: " + calculateAvgQuadraticError(discreteFunction,
                 fourierCalculator));
     }
@@ -28,7 +29,8 @@ public class AvgErrorCalculator {
     }
 
     public void calculateAvgFourierError(Map<Double, Double> discreteFunction) {
-        FourierCalculator fourierCalculator = new FourierCalculatorImpl(discreteFunction);
+        FourierCalculator fourierCalculator = new FourierCalculatorFunction(new SimpsonIntegralCalculator(),
+                new PolynomCalculator().calculatePolynomialFunction(discreteFunction));
         System.out.println("Avg error fourier: " + calculateAvgError(discreteFunction, fourierCalculator));
     }
 
