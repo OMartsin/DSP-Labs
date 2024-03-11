@@ -17,6 +17,8 @@ public class MyFourierConfig {
             put(-Math.PI + 6 * ((2 * Math.PI) / 6), 3.76);
         }
     };
+
+    public static final int FOURIER_N = 100;
     public static final double A = -Math.PI;
     public static final double B = Math.PI;
 }

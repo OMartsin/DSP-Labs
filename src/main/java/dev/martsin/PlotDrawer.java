@@ -29,7 +29,7 @@ public class PlotDrawer {
         }
         for (i = 0; i < nOfPoints; i++) {
             xF[i] = a + i * h;
-            yF[i] = calculator.countFourierSeries(function.size(), xF[i]);
+            yF[i] = calculator.countFourierSeries(MyFourierConfig.FOURIER_N, xF[i]);
             xP[i] = a + i * h;
             yP[i] = polynom.apply(xP[i]);
         }

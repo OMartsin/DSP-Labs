@@ -52,7 +52,7 @@ public class AvgErrorCalculator {
         for (Map.Entry<Double, Double> entry : discreteFunction.entrySet()) {
             double x = entry.getKey();
             double y = entry.getValue();
-            sumPolynom += Math.pow(fourierCalculator.countFourierSeries(discreteFunction.size(),x), 2);
+            sumPolynom += Math.pow(fourierCalculator.countFourierSeries(MyFourierConfig.FOURIER_N,x), 2);
             sumFunction += Math.pow(y, 2);
         }
         return Math.sqrt(Math.abs(sumPolynom - sumFunction) / discreteFunction.size());
@@ -73,7 +73,7 @@ public class AvgErrorCalculator {
         for (Map.Entry<Double, Double> entry : discreteFunction.entrySet()) {
             double x = entry.getKey();
             double y = entry.getValue();
-            sum += Math.abs(fourierCalculator.countFourierSeries(discreteFunction.size(),x) - y);
+            sum += Math.abs(fourierCalculator.countFourierSeries(MyFourierConfig.FOURIER_N,x) - y);
         }
         return sum / discreteFunction.size();
     }

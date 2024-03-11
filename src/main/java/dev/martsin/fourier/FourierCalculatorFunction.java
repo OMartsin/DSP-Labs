@@ -1,14 +1,20 @@
 package dev.martsin.fourier;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.function.Function;
 
 public class FourierCalculatorFunction implements FourierCalculator {
     private final IntegralCalculator integralCalculator;
     private final Function<Double,Double> f;
+    private final Map<Integer, Double> ak;
+    private final Map<Integer, Double> bk;
 
     public FourierCalculatorFunction(IntegralCalculator integralCalculator, Function<Double,Double> f) {
         this.integralCalculator = integralCalculator;
         this.f = f;
+        this.ak = new HashMap<>();
+        this.bk = new HashMap<>();
     }
     private Double countAn(Function<Double, Double> f, double a, double b, int n) {
         return (1 / Math.PI) * integralCalculator.calculateIntegral(t -> f.apply(t) * Math.cos(n * t), a, b);
@@ -31,8 +37,9 @@ public class FourierCalculatorFunction implements FourierCalculator {
         double sum = 0;
         var a0 = countA0(f, a, b);
         for (int i = 1; i <= n; i++) {
-            var an = countAn(f, a, b, i);
-            var bn = countBn(f, a, b, i);
+            final var index = i;
+            var an = ak.computeIfAbsent(i, k -> countAn(f, a, b, index));
+            var bn = bk.computeIfAbsent(i, k -> countBn(f, a, b, index));
             sum += an * Math.cos(i * t) + bn * Math.sin(i * t);
         }
         return a0 / 2 + sum;

@@ -18,7 +18,7 @@ public class Main {
         polynomCalculator.printPolynomialFunction(MyFourierConfig.FUNCTION);
         avgErrorCalculator.calculateAvgPolynomError(MyFourierConfig.FUNCTION);
         avgErrorCalculator.calculateAvgFourierError(MyFourierConfig.FUNCTION);
-//        avgErrorCalculator.calculateAvgQuadraticPolynomError(MyFourierConfig.FUNCTION);
-//        avgErrorCalculator.calculateAvgQuadraticFourierError(MyFourierConfig.FUNCTION);
+        avgErrorCalculator.calculateAvgQuadraticPolynomError(MyFourierConfig.FUNCTION);
+        avgErrorCalculator.calculateAvgQuadraticFourierError(MyFourierConfig.FUNCTION);
     }
 }
